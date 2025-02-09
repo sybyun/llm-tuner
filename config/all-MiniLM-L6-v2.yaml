@@ -1,0 +1,19 @@
+model:
+  name: "sentence-transformers/all-MiniLM-L6-v2"
+  output_dir: "models/finetuned_embedding_model"
+
+training:
+  batch_size: 16
+  epochs: 3
+  learning_rate: 2e-5
+  warmup_steps: 100
+  loss_function: "cosine"  # CosineSimilarityLoss 적용
+
+dataset:
+  name: "glue"
+  subset: "stsb"
+  text_columns: ["sentence1", "sentence2"]
+  label_column: "label"
+
+hardware:
+  device: "cpu"
