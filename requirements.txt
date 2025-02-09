@@ -1,0 +1,32 @@
+# 기본 라이브러리
+numpy
+pandas
+scikit-learn
+pyyaml
+tqdm
+
+# PyTorch 및 PyTorch Lightning
+torch>=2.0.0
+torchvision
+torchaudio
+pytorch-lightning
+
+# Hugging Face 라이브러리
+sentence-transformers
+transformers
+datasets
+tokenizers
+
+# MLflow (실험 관리)
+mlflow
+
+# Apache Arrow (대용량 데이터 처리)
+pyarrow
+
+# FastAPI 및 API 관련 패키지
+fastapi
+uvicorn
+pydantic
+
+# 기타 유틸리티
+click  # CLI 지원

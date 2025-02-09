@@ -1,0 +1,32 @@
+dataset:
+  name: "custom_dataset"
+  path: "./data/train.csv"
+  format: "csv"
+  text_column: "text"
+  label_column: "label"
+  split: {"train": 0.8, "val": 0.2}
+
+model:
+  name: "bert-base-uncased"
+  type: "huggingface"  # "huggingface" 또는 "custom"
+  checkpoint: "bert-base-uncased"
+  custom_model_path: null  # "custom" 모델일 경우 경로 지정
+
+training:
+  batch_size: 16
+  epochs: 3
+  learning_rate: 5e-5
+  optimizer: "adamw"
+  gradient_accumulation: 2
+  fp16: true  # mixed precision training
+
+tokenizer:
+  padding: "max_length"
+  truncation: true
+  max_length: 512
+
+metrics:
+  - accuracy
+  - f1
+  - precision
+  - recall
